@@ -12,6 +12,8 @@
 		AB9197D91AF0F13C00E64497 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9197D81AF0F13C00E64497 /* Images.xcassets */; };
 		AB9197DC1AF0F13C00E64497 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9197DA1AF0F13C00E64497 /* LaunchScreen.xib */; };
 		AB9197E81AF0F13C00E64497 /* ToLogInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9197E71AF0F13C00E64497 /* ToLogInTests.swift */; };
+		AB9197F51AF0F81100E64497 /* LgoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9197F41AF0F81100E64497 /* LgoinViewController.swift */; };
+		AB9197F71AF0F8F600E64497 /* ToLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9197F61AF0F8F600E64497 /* ToLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		AB9197E11AF0F13C00E64497 /* ToLogInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToLogInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9197E61AF0F13C00E64497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9197E71AF0F13C00E64497 /* ToLogInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToLogInTests.swift; sourceTree = "<group>"; };
+		AB9197F41AF0F81100E64497 /* LgoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LgoinViewController.swift; sourceTree = "<group>"; };
+		AB9197F61AF0F8F600E64497 /* ToLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		AB9197F11AF0F21000E64497 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB9197F41AF0F81100E64497 /* LgoinViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		AB9197F21AF0F21B00E64497 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB9197F61AF0F8F600E64497 /* ToLoginView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -225,7 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9197F51AF0F81100E64497 /* LgoinViewController.swift in Sources */,
 				AB9197D21AF0F13C00E64497 /* AppDelegate.swift in Sources */,
+				AB9197F71AF0F8F600E64497 /* ToLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

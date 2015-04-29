@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YM4-rv-G1h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="ToLogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-cg-VuR" userLabel="Login Panel" customClass="ToLogin" customModule="ToLogIn" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="32" y="96" width="536" height="212"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Login App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl8-xB-Jfb">
+                                        <rect key="frame" x="215" y="16" width="107" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eEo-va-usq" userLabel="Email Field">
+                                        <rect key="frame" x="158" y="59" width="220" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6xm-cI-qUL"/>
+                                            <constraint firstAttribute="width" constant="220" id="mes-nJ-aU6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rNf-fE-BSe"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qVE-KI-Lox" userLabel="password Field">
+                                        <rect key="frame" x="158" y="97" width="220" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Jav-bh-PDe"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="1Yc-ti-g3t"/>
+                                    <constraint firstAttribute="centerX" secondItem="qVE-KI-Lox" secondAttribute="centerX" id="Lxo-OY-9F5"/>
+                                    <constraint firstItem="qVE-KI-Lox" firstAttribute="width" secondItem="eEo-va-usq" secondAttribute="width" id="M3f-1j-Vye"/>
+                                    <constraint firstItem="eEo-va-usq" firstAttribute="top" secondItem="Yl8-xB-Jfb" secondAttribute="bottom" constant="21" id="Tom-I1-F4x"/>
+                                    <constraint firstItem="qVE-KI-Lox" firstAttribute="top" secondItem="eEo-va-usq" secondAttribute="bottom" constant="8" id="Vg9-QX-xRH"/>
+                                    <constraint firstAttribute="centerX" secondItem="Yl8-xB-Jfb" secondAttribute="centerX" id="WdL-oj-9pc"/>
+                                    <constraint firstAttribute="centerX" secondItem="eEo-va-usq" secondAttribute="centerX" id="c9y-26-BGT"/>
+                                    <constraint firstItem="Yl8-xB-Jfb" firstAttribute="top" secondItem="fEU-cg-VuR" secondAttribute="top" constant="16" id="mbJ-od-m0Z"/>
+                                    <constraint firstItem="qVE-KI-Lox" firstAttribute="height" secondItem="eEo-va-usq" secondAttribute="height" id="ywM-aG-yhI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fEU-cg-VuR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="AKh-gB-hv4"/>
+                            <constraint firstItem="fEU-cg-VuR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="Zz4-wn-hQ1"/>
+                            <constraint firstAttribute="centerX" secondItem="fEU-cg-VuR" secondAttribute="centerX" id="yt7-YQ-KHL" customClass="Login"/>
+                            <constraint firstAttribute="trailing" secondItem="fEU-cg-VuR" secondAttribute="trailing" constant="32" id="zAf-jP-b6y"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ee8-cc-rNw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="370"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2C6-bC-md5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YM4-rv-G1h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T8n-k0-7bJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1uu-Hw-6FA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldA-kR-mxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="370"/>
         </scene>
     </scenes>
 </document>
