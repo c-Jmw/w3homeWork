@@ -7,7 +7,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="ToLogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToLogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-cg-VuR" userLabel="Login Panel" customClass="ToLogin" customModule="ToLogIn" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEU-cg-VuR" userLabel="Login Panel" customClass="ToLogin" customModule="ToLogIn" colorLabel="IBBuiltInLabel-Blue">
                                 <rect key="frame" x="32" y="96" width="536" height="212"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Login App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yl8-xB-Jfb">
@@ -34,7 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rNf-fE-BSe"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ZyJ-Oz-q7L"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qVE-KI-Lox" userLabel="password Field">
@@ -42,7 +42,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Jav-bh-PDe"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="mrE-8o-eFr"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -69,6 +69,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ee8-cc-rNw"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="eEo-va-usq" id="PRi-gf-Iou"/>
+                        <outlet property="passwordTextField" destination="qVE-KI-Lox" id="UBB-9G-YxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

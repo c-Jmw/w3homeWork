@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true
+    }
 
 }
